@@ -5,7 +5,11 @@ class Program
     static void Main(string[] args)
     {
         
-        /*Question4();
+        /*
+        Question1();
+        Question2();
+        Question3(); 
+        Question4();
         Question5();
         Question6();
         Question7();
@@ -18,6 +22,77 @@ class Program
         Question14();
 
     }
+    static void Question1()
+{
+    // 1.Write a program that asks the user for a number n and
+    // prints the sum of the numbers 1 to n
+    Console.Write("Enter a number... ");
+    int max = Convert.ToInt32(Console.ReadLine());
+    int sum = 0;
+    for (int i = 1; i <= max; i++)
+    {
+        sum += i;
+    }
+    Console.WriteLine($"Sum of numbers from 1 to {max}: {sum}");
+}
+
+static void Question2()
+{
+    Console.Write("Enter a number... ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+    //Basic - IF statement
+    if (num % 2 == 1)
+    {
+        Console.WriteLine($"{num} is an odd number.");
+    }
+    else { 
+        Console.WriteLine($"{num} is an even number.");
+    }
+    //Alternative - using ternary
+    string description = (num % 2 == 1) ? "odd" : "even";
+    Console.WriteLine($"{num} is an {description} number.");
+}
+
+static void Question3()
+{
+    //3.	Write a guessing game where the user must guess a secret number.
+    //After every guess the program tells the user whether their number was too large or too small.
+    //At the end the number of tries needed should be printed.
+    //It counts only as one try if they input the same number multiple times consecutively.
+    bool found = false;
+    int numGuesses = 0;
+    Dictionary<int, int> guesses = new Dictionary<int, int>();
+    Random generator = new Random();
+    int secretNumber = generator.Next(1, 11);
+    Console.WriteLine("Guess a number between 1 and 10...");
+    while (!found)
+    {
+        int guess = Convert.ToInt32(Console.ReadLine());
+        numGuesses++;
+        if (guess == secretNumber)
+        {
+            found = true;
+        }
+        else if (guess > secretNumber) {
+            if (guesses.ContainsKey(guess))
+            {
+                guesses[guess]++;
+                numGuesses--;
+            }
+            else
+            {
+                guesses.Add(guess, 1);
+            }
+            Console.WriteLine("Too high! Try again...");
+        }
+        else
+        {
+            Console.WriteLine("Too low! Try again...");
+        }
+    }
+    Console.WriteLine($"Congratulations! You guessed the correct number in {numGuesses} attempts.");
+}
 
     private static void Question4()
     {
