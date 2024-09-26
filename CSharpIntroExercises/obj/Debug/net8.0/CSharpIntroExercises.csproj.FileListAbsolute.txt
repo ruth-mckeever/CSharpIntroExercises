@@ -1,0 +1,14 @@
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/bin/Debug/net8.0/CSharpIntroExercises
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/bin/Debug/net8.0/CSharpIntroExercises.deps.json
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/bin/Debug/net8.0/CSharpIntroExercises.runtimeconfig.json
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/bin/Debug/net8.0/CSharpIntroExercises.dll
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/bin/Debug/net8.0/CSharpIntroExercises.pdb
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.AssemblyInfoInputs.cache
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.AssemblyInfo.cs
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.csproj.CoreCompileInputs.cache
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.dll
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/refint/CSharpIntroExercises.dll
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.pdb
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.genruntimeconfig.cache
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/ref/CSharpIntroExercises.dll
