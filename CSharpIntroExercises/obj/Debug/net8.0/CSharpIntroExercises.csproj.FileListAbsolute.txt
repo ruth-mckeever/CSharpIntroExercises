@@ -12,3 +12,4 @@
 /Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.pdb
 /Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.genruntimeconfig.cache
 /Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/ref/CSharpIntroExercises.dll
+/Users/ruthmckeever/RiderProjects/CSharpIntroExercises/CSharpIntroExercises/obj/Debug/net8.0/CSharpIntroExercises.sourcelink.json

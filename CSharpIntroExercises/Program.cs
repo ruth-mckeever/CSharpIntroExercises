@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        Question3(); 
         /*
         Question1();
         Question2();
-        Question3(); 
+        
         Question4();
         Question5();
         Question6();
@@ -18,9 +18,14 @@ class Program
         Question11();
         Question12();
         Question13();
-        */
         Question14();
-
+        Question15();
+        Question16();
+        Question17();
+        
+        
+        Question18();
+        */
     }
     static void Question1()
 {
@@ -74,7 +79,7 @@ static void Question3()
         {
             found = true;
         }
-        else if (guess > secretNumber) {
+        else {
             if (guesses.ContainsKey(guess))
             {
                 guesses[guess]++;
@@ -84,11 +89,15 @@ static void Question3()
             {
                 guesses.Add(guess, 1);
             }
-            Console.WriteLine("Too high! Try again...");
-        }
-        else
-        {
-            Console.WriteLine("Too low! Try again...");
+            
+            if (guess > secretNumber)
+            {
+                Console.WriteLine("Too high! Try again...");
+            }
+            else
+            {
+                Console.WriteLine("Too low! Try again...");
+            }
         }
     }
     Console.WriteLine($"Congratulations! You guessed the correct number in {numGuesses} attempts.");
@@ -205,7 +214,21 @@ static void Question3()
     {
         //15.	Write a program that calculates and prints the average of several integers. Assume the last value read is the sentinel 9999.
         //A typical input sequence might be 10 8 11 7 9 9999 indicating that the average of all the values preceding 9999 is to be calculated.
-        
+        int sentinel = 9999;
+        Console.WriteLine("Please enter integers: (9999 to exit)");
+        int input = Convert.ToInt32(Console.ReadLine());
+        int count = 0, sum = 0;
+        double average = 0;
+        while (input != sentinel)
+        {
+            count++;
+            sum += input;
+            input = Convert.ToInt32(Console.ReadLine());
+        }
+
+        average = sum / count;
+        Console.WriteLine($"Average of all numbers entered is: {average}");
+
     }
 
     private static void Question16()
@@ -214,12 +237,39 @@ static void Question3()
         //Write a program that reads five numbers (each between 1 and 30).
         //For each number read, your program should print a line containing that number of adjacent asterisks.
         //For example, if your program reads the number seven, it should print *******.
+        int[] numArray =  new int[5];
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Enter a number between 1 and 30");
+            numArray[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        foreach (int num in numArray)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();        //Only move onto a new line after correct number of * have been printed
+        }
     }
     
     private static void Question17()
     {
         //17.	Write a program that allows a user to enter 10 numbers between 1 and 100 and displays, the total of the numbers,
         // the smallest and largest numbers entered and the average of the numbers entered.
+        int total = 0, largest = 0, smallest = 100;
+        double average = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Enter a number between 1 and 100");
+            int num = Convert.ToInt32(Console.ReadLine());
+            total += num;
+            if (num > largest) largest = num;
+            if (num < smallest) smallest = num;
+        }
+        average = total / 10;
+        Console.WriteLine($"Total: {total}, smallest: {smallest}, largest: {largest}, average: {average}");
     }
     
     private static void Question18()
@@ -233,6 +283,12 @@ static void Question3()
         // 4 	40 	400 	4000
         // 5 	50 	500 	5000
         // 
+
+        Console.WriteLine("N \t10*N \t100*N \t1000*N");
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine($"{i} \t{i * 10} \t{i * 100} \t{i * 100}");
+        }
     }
     
     private static void Question19()
@@ -241,6 +297,18 @@ static void Question3()
         //  The company pays “straight-time” for the first 40 hours worked by each employee and pays “time-and-a-half” for all hours worked in excess of 40 hours.
         //  You are given a list of the employees of the company, the number of hours each employee worked last week and the hourly rate of each employee.
         //  Your program should input this information for each employee and should determine and display the employee's gross pay.
+        Employee emp1 = new Employee("Ted", 28, 12.5);
+        Employee emp2 = new Employee("Tom", 40, 13.5);
+        Employee emp3 = new Employee("Tim", 45, 14.5);
+        Employee emp4 = new Employee("Tod", 50, 15.5);
+
+        Employee[] employeeList = { emp1, emp2, emp3, emp4 };
+
+        foreach (Employee emp in employeeList)
+        {
+            
+        }
+
     }
     //Useful/reusable methods
 
@@ -295,5 +363,19 @@ static void Question3()
             reversed = c + reversed;
         }
         return reversed;
+    }
+}
+
+class Employee
+{
+    public string Name { get; set; }
+    public double HoursWorked { get; set; }
+    public double HourlyRate { get; set; }
+
+    public Employee(string name, double hoursWorked, double hourlyRate)
+    {
+        Name = name;
+        HoursWorked = hoursWorked;
+        HourlyRate = hourlyRate;
     }
 }
