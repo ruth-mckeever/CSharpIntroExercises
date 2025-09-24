@@ -4,16 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        Question3(); 
+        
         /*
         Question1();
         Question2();
-        
+        Question3(); 
         Question4();
         Question5();
         Question6();
         Question7();
+        Question8();
+        Question9();
+        */
         
+        Question10();
+        /*
         
         Question11();
         Question12();
@@ -22,8 +27,6 @@ class Program
         Question15();
         Question16();
         Question17();
-        
-        
         Question18();
         */
     }
@@ -139,8 +142,83 @@ static void Question3()
         string isAnIsogram = CheckIsogram(possibleIsogram) ? "is" : "isn't";
         Console.WriteLine($"{possibleIsogram} {isAnIsogram} an isogram.");
     }
-    //TODO: Add 8, 9, 10
+    
+    private static void Question8()
+    {
+        //Accept an integer as input and calculate the factorial of that number. If the
+        // number is 4, then the output should be 24 (i.e. 4x3x2x1).
+        Console.WriteLine("Enter an integer to calculate its factorial");
+        int highNumber = Convert.ToInt32(Console.ReadLine());
+        int factorial = 1;
+        for (int i = highNumber; i > 0; i--)
+        {
+            factorial *= i;
+        }
+        Console.WriteLine($"Factorial of {highNumber} is {factorial}");
+    }
 
+    private static void Question9()
+    {
+        //Write a program that displays the sum of the even numbers and the product
+        // of the odd numbers between 1 and 10. Use two loops. Can you solve the
+        // problem with one loop?
+        int sumEven = 0;
+        int productOdd = 1;
+        
+        //One Loop
+        for (int i = 1; i <= 10; i++)
+        {
+            if (i % 2 == 0)
+            {
+                sumEven += i;
+            }
+            else
+            {
+                productOdd *= i;
+            }
+        }
+        
+        Console.WriteLine($"The sum of the even numbers between 1 and 10 is: {sumEven}");
+        Console.WriteLine($"The product of the odd numbers between 1 and 10 is: {productOdd}");
+        
+    }
+    
+    private static void Question10()
+    {
+        //Write a program that displays the average of the integers between 5 and 17.
+        // Edit your program so that the user can enter the start and end numbers.
+        double total = 0;
+        int count = 0;
+        double average = 0;
+        
+        //Average numbers between 5 and 17
+        for (int i = 5; i <= 17; i++)
+        {
+            count++;
+            total += i;
+        }
+        average = total / count;
+        Console.WriteLine($"The average of all integers between 5 and 17 is {average}");
+        
+        //Average numbers between two user-inputted numbers
+        total = 0;
+        count = 0;
+        average = 0;
+        Console.WriteLine("Enter a low number");
+        int start = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter a high number");
+        int end = Convert.ToInt32(Console.ReadLine());
+        for (int i = start; i <= end; i++)
+        {
+            count++;
+            total += i;
+        }
+        average = total / count;
+        Console.WriteLine($"The average of all integers between {start} and {end} is {average}");
+
+    }
+    
+    // Week 2 Questions 1-8
     private static void Question11()
     {
         //11.	€1000 is deposited in a savings account and €1000 is deposited at the end of each year.
@@ -306,7 +384,7 @@ static void Question3()
 
         foreach (Employee emp in employeeList)
         {
-            
+            //TODO: Finish this
         }
 
     }
